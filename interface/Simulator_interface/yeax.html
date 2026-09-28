@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Simulator Interface</title>
+</head>
+<body>
+	<h1>Simulator_interface</h1>
+<div class="toolbar">
+    <button onclick="selectTool('battery')">Battery</button>
+    <button onclick="selectTool('resistor')">Resistor</button>
+    <button onclick="selectTool('led')">LED</button>
+    <button onclick="selectTool('wire')">Wire</button>
+    <button onclick="clearCircuit()">Clear</button>
+</div>
+
+<div class="workspace">
+    <canvas id="canvas" width="370" height="500"></canvas>
+</div>
+  <script src="js/improve.js"></script>
+</body>
+</html> 
