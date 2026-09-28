@@ -190,9 +190,34 @@ let wireStart = null;
 let nextId = 1;
 
 
-components.push(l)
+components.push(l);
+components.push(b);
+components.push(r);
+for(let c of components){
+  wires.push(c.input_terminal());
+  wires.push(c.output_terminal());
+}
 draw();
+//console.log(l)
+canvas.addEventListener("click", function(event) {
 
+    const rect = canvas.getBoundingClientRect();
+
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+  //  console.log(x,y)
+    for(let t of wires){
+      if((x>=t.posx && x<=t.posx+25) &&(y>=t.posy && y<=t.posy+25)){
+        console.log(t)
+      }
+    }
+
+
+
+    
+    draw();
+
+});
 
 
 function draw() {
